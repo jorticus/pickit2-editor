@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF476476-F09D-4A41-86F9-4BF2BA8ABD0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PicKit2_Script_Editor</RootNamespace>
+    <AssemblyName>PicKit2 Script Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmAbout.Designer.cs">
+      <DependentUpon>fmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="CoreInst24.cs" />
+    <Compile Include="DeviceFile.cs" />
+    <Compile Include="fmDuplicate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmDuplicate.Designer.cs">
+      <DependentUpon>fmDuplicate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmImportPartWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmImportPartWizard.Designer.cs">
+      <DependentUpon>fmImportPartWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmPartWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmPartWizard.Designer.cs">
+      <DependentUpon>fmPartWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmPatcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmPatcher.Designer.cs">
+      <DependentUpon>fmPatcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMain.Designer.cs">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patcher24r2.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property Editor\HexEditor.cs" />
+    <Compile Include="Property Editor\ScriptEditor.cs" />
+    <EmbeddedResource Include="fmAbout.resx">
+      <DependentUpon>fmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmDuplicate.resx">
+      <DependentUpon>fmDuplicate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmImportPartWizard.resx">
+      <DependentUpon>fmImportPartWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmPartWizard.resx">
+      <DependentUpon>fmPartWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmPatcher.resx">
+      <DependentUpon>fmPatcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMain.resx">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microchip21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_12x121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Device IDs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Device IDs - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeviceIDs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlashSize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlashSize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeviceIDs1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
